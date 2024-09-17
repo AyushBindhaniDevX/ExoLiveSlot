@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Mic Slot Selection</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Magic UI (Alpine.js) -->
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <!-- Magic UI Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/@alpinejs/ui@3.x.x/dist/ui.min.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="container mx-auto p-8 bg-white rounded-lg shadow-lg max-w-md">
+        <h1 class="text-3xl font-bold text-center mb-6">Open Mic Slot Selection</h1>
+        <form id="slotForm" class="space-y-6">
+
+            <!-- Name Input -->
+            <div class="space-y-2">
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Slot Selection -->
+            <div class="space-y-2">
+                <label for="segment" class="block text-sm font-medium text-gray-700">Select Slot</label>
+                <select id="segment" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" required>
+                    <option value="">Choose a Slot</option>
+                    <option value="Slot A">Slot A (5:40-5:47)</option>
+                    <option value="Slot B">Slot B (5:50-5:57)</option>
+                    <option value="Slot C">Slot C (6:00-6:07)</option>
+                    <option value="Slot D">Slot D (6:10-6:17)</option>
+                    <option value="Slot E">Slot E (6:20-6:27)</option>
+                    <option value="Slot F">Slot F (6:30-6:37)</option>
+                    <option value="Slot G">Slot G (6:40-6:47)</option>
+                    <option value="Slot H">Slot H (6:50-6:57)</option>
+                    <option value="Slot I">Slot I (7:00-7:07)</option>
+                    <option value="Slot J">Slot J (7:10-7:17)</option>
+                    <option value="Slot K">Slot K (7:20-7:27)</option>
+                    <option value="Slot L">Slot L (7:30-7:37)</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-center">
+                <button type="submit" class="px-6 py-2 bg-indigo-500 text-white font-semibold rounded-lg hover:bg-indigo-600 focus:ring-2 focus:ring-indigo-400">
+                    Submit
+                </button>
+            </div>
+        </form>
+
+        <!-- Result Message -->
+        <div id="result" class="mt-6 text-center text-lg text-indigo-600"></div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
